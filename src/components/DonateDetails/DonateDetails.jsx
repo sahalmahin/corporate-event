@@ -15,8 +15,8 @@ const DonateDetails = () => {
     }
 
     const handleDonate = () => {
-        donateInfo(id)
-        toast('Viewed');
+        donateInfo(idInt)
+        toast('Donated Successfully');
     }
 
     return (
