@@ -22,7 +22,7 @@ const Donate = ({ donate }) => {
             <div style={cardBg} className="w-[360px] h-[320px] mb-6 rounded-xl">
                 <img className="w-full" src={img} alt="" />
                 <div className="mt-4 ml-4">
-                    <button style={btnBg} className="p-1 w-24 h-8 font-semibold rounded-md">{category}</button>
+                    <div style={btnBg} className="p-1 w-24 h-8 text-center font-semibold rounded-md">{category}</div>
                     <p style={colorText} className="font-bold mt-2">{title}</p>
                 </div>
             </div>

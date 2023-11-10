@@ -1,4 +1,7 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { donateInfo } from "../Utility/localstoragel";
 
 const DonateDetails = () => {
 
@@ -6,28 +9,25 @@ const DonateDetails = () => {
     const { id } = useParams();
     const idInt = parseInt(id);
     const donate = donates.find(donate => donate.id === idInt)
-    console.log(donate);
 
     const btnBg = {
-        backgroundColor: donate.button_background,
-        color: donate.color_for_text
+        backgroundColor: donate.color_for_text,
     }
 
-    const colorText = {
-        color: donate.color_for_text
-    };
+    const handleDonate = () => {
+        donateInfo(id)
+        toast('Viewed');
+    }
 
     return (
-        <div className="w-[600px] h-[200px] gird gap-2 md:grid-cols-4 border border-gray-400">
-            <div className="flex gap-8">
-                <img className="bg-contain bg-center" src={donate.img} alt="" />
-                <div className="mt-8">
-                    <p>{donate.category}</p>
-                    <h3 className="font-bold text-xl">{donate.title}</h3>
-                    <p style={colorText} className="font-bold">{donate.price}</p>
-                    <button style={btnBg} className="p-2 w-32 h-10 font-semibold rounded-md">View details</button>
-                </div>
+        <div className="shadow-inherit  w-3/6 mx-auto">
+            <figure><img className="w-full" src={donate.img} alt="" /></figure>
+            <div className="w-full card bg-base-[50] h-22 rounded-md  py-5 mt-[-82px]">
+                <button onClick={handleDonate} style={btnBg} className="p-2 w-32 h-10 ml-6 font-semibold rounded-md text-white">Donate {donate.price}</button>
             </div>
+            <h3 className="font-bold text-2xl mt-9">{donate.title}</h3>
+            <p className="font-semibold text-gray-600">{donate.description}</p>
+            <ToastContainer />
         </div>
     );
 };
