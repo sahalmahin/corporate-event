@@ -25,10 +25,10 @@ const Donation = () => {
                     donates.slice(0, donateLength).map((donate, idx) => <DonateCard key={idx} donate={donate}></DonateCard>)
                 }
             </div>
-            <div className={donateLength === donates.length ? 'hidden' : ''}>
+            <div className={(donateLength > 4 && donateLength <= donates.length) || donates.length === 0 ? 'hidden' : ''}>
                 <button onClick={() => setDonateLength(donates.length)} className="flex btn btn-lg font-semibold text-white bg-green-700 mx-auto my-10">Show More</button>
-
             </div>
+
         </div>
     );
 };
