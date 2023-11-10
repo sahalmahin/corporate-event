@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 const Donate = ({ donate }) => {
 
@@ -29,5 +30,9 @@ const Donate = ({ donate }) => {
         </Link>
     );
 };
+
+Donate.propTypes = {
+    donate: PropTypes.object
+  };
 
 export default Donate;

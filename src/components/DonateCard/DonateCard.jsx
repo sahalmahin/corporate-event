@@ -1,6 +1,7 @@
+import PropTypes from 'prop-types';
 const DonateCard = ({ donate }) => {
 
-    const { img, category, title, price, button_background, color_for_text,card_background } = donate;
+    const { img, category, title, price, button_background, color_for_text, card_background } = donate;
 
     const background = {
         backgroundColor: button_background,
@@ -31,5 +32,9 @@ const DonateCard = ({ donate }) => {
         </div>
     );
 };
+
+DonateCard.propTypes = {
+    donate: PropTypes.object
+  };
 
 export default DonateCard;
