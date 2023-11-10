@@ -1,9 +1,13 @@
 import DonationDetails from "../DonationDetails/DonationDetails";
 
 const Home = () => {
+
+    
+
     return (
-        <div className="max-w-screen-2xl mx-auto">
+        <div className="max-w-screen-2xl mx-auto bg-fixed">
             <div>
+                <img src="" alt="" />
                 <div className="text-center mt-36">
                     <p className="text-5xl font-bold mb-20">I Grow By Helping People In Need</p>
                     <div className="w-[470px] h-[70px] mx-auto">
