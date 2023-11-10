@@ -18,7 +18,7 @@ const Header = () => {
         <div >
             <div className="  navbar bg-base-100 px-12 mt-10">
                 <div className="flex-1">
-                    <img src="../../../Resources/Logo.png" alt="" />
+                    <img src="https://i.postimg.cc/K88mS6XP/Logo.png" alt="" />
                 </div>
                 <div className="flex-none ">
                     <ul className="menu menu-horizontal px-1 text-lg font-semibold gap-10">
